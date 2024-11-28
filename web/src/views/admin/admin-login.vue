@@ -63,6 +63,7 @@
 
 <script setup lang="ts">
 import {useUserStore} from '/@/store';
+import axiosios from 'axios';
 import logoImage from '/@/assets/images/k-logo.png';
 
 const router = useRouter();
@@ -100,7 +101,10 @@ const handleSubmit = () => {
 const handleLogin = () => {
   userStore.adminLogin({
     username: data.loginForm.username,
-    password: data.loginForm.password
+    password: data.loginForm.password,
+    role: 1,
+    status: 1
+    
   }).then(res=>{
     loginSuccess()
   }).catch(err=> {

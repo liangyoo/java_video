@@ -32,8 +32,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     public User getAdminUser(User user) {
         QueryWrapper<User> queryWrapper = new QueryWrapper();
         queryWrapper.eq("username", user.getUsername());
-        queryWrapper.eq("password", user.getPassword());
-        queryWrapper.gt("role", "1");
+        queryWrapper.eq("role","3");
         return userMapper.selectOne(queryWrapper);
     }
 
@@ -42,7 +41,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         QueryWrapper<User> queryWrapper = new QueryWrapper();
         queryWrapper.eq("username", user.getUsername());
         queryWrapper.eq("password", user.getPassword());
-        queryWrapper.eq("role", "1");
+        queryWrapper.eq("role","1");
         return userMapper.selectOne(queryWrapper);
     }
 

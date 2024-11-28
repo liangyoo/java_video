@@ -75,10 +75,12 @@ const handleRegister = () => {
     username: tData.loginForm.username,
     password: tData.loginForm.password,
     rePassword: tData.loginForm.repassword
+    
   }).then(res => {
     message.success('注册成功！')
     router.push({name: 'login'})
   }).catch(err => {
+    console.log(err)
     message.error(err.msg || '注册失败')
   })
 }

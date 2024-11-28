@@ -59,6 +59,7 @@ const pageData = reactive({
 })
 
 const handleLogin = ()=> {
+  console.log('222');
   userStore.login({
     username: pageData.loginForm.username,
     password: pageData.loginForm.password

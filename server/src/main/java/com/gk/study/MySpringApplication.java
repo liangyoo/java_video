@@ -11,7 +11,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MySpringApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MySpringApplication.class, args);
+        try {
+            SpringApplication.run(MySpringApplication.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
