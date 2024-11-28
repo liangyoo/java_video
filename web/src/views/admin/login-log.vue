@@ -21,17 +21,17 @@
         <template #bodyCell="{ text, record, index, column }">
           <template v-if="column.key === 'operation'">
             <span>
-              <a @click="handleEdit(record)">编辑</a>
+              <!-- <a @click="handleEdit(record)">编辑</a>
               <a-divider type="vertical" />
               <a-popconfirm title="确定删除?" ok-text="是" cancel-text="否" @confirm="confirmDelete(record)">
                 <a href="#">删除</a>
-              </a-popconfirm>
+              </a-popconfirm> -->
             </span>
           </template>
         </template>
       </a-table>
     </div>
-  </div>
+  </div>  
 </template>
 
 <script setup lang="ts">
@@ -102,7 +102,7 @@ const getDataList = () => {
 
 
 const rowSelection = ref({
-  onChange: (selectedRowKeys: (string | number)[], selectedRows: DataItem[]) => {
+  onChange: (selectedRowKeys: (string | number)[], selectedRows: any[]) => {
     console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
     data.selectedRowKeys = selectedRowKeys;
   },

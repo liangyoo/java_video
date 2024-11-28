@@ -70,6 +70,7 @@ export function get<T = any>(config: AxiosRequestConfig): Promise<T> {
 }
 
 export function post<T = any>(config: AxiosRequestConfig): Promise<T> {
+  debugger
   return request({ ...config, method: 'POST' });
 }
 

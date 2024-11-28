@@ -18,6 +18,7 @@ export const useUserStore = defineStore('user', {
   actions: {
     // 用户登录
     async login(loginForm) {
+      console.log("登录");
       const result = await userLoginApi(loginForm);
       console.log('result==>', result)
 

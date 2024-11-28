@@ -124,6 +124,7 @@ const modal = reactive({
   form: {
     id: undefined,
     title: undefined,
+    content: undefined,
   },
   rules: {
     title: [{ required: true, message: '请输入', trigger: 'change' }],
@@ -158,7 +159,7 @@ const getDataList = () => {
 
 
 const rowSelection = ref({
-  onChange: (selectedRowKeys: (string | number)[], selectedRows: DataItem[]) => {
+  onChange: (selectedRowKeys: (string | number)[], selectedRows: any[]) => {
     console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
     data.selectedRowKeys = selectedRowKeys;
   },
