@@ -8,11 +8,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ant-design/icons-vue": "^6.1.0",
+    "@ant-design/icons-vue": "^6.1.0", 
     "@vueuse/components": "^9.10.0",
     "@vueuse/core": "^9.10.0",
     "ant-design-vue": "^3.2.20",
     "axios": "^1.2.2",
+    "element-plus": "^2.9.0",
     "pinia": "^2.0.28",
     "pinia-plugin-persistedstate": "^3.0.2",
     "qs": "^6.11.0",

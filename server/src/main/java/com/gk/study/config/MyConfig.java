@@ -22,7 +22,7 @@ public class MyConfig implements WebMvcConfigurer {
 
         // 添加swagger静态资源
         registry.addResourceHandler("doc.html").addResourceLocations("classpath:/META-INF/resources/");
-        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+        registry.addResourceHandler("/**").addResourceLocations("classpath:/image/");
     }
 
     @Override

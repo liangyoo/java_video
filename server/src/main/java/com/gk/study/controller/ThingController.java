@@ -41,6 +41,11 @@ public class ThingController {
         // 未完待续。。
         return new APIResponse(ResponeCode.SUCCESS, "查询成功", list);
     }
- 
- 
+    @RequestMapping(value = "/create", method = RequestMethod.POST)
+    public APIResponse create(Thing thing){
+        service.createThing(thing);
+        return new APIResponse(ResponeCode.SUCCESS, "创建成功");
+    }
+
+
 }

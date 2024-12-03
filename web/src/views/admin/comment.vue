@@ -143,19 +143,19 @@ const getList = () => {
 
 
 const rowSelection = ref({
-  onChange: (selectedRowKeys: (string | number)[], selectedRows: DataItem[]) => {
+  onChange: (selectedRowKeys: (string | number)[], selectedRows: any[]) => {
     console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
     data.selectedRowKeys = selectedRowKeys;
   },
 });
 
 const handleAdd = () => {
-  // createApi({}).then(res => {
-  //   message.success("模拟新增成功")
-  //   getList()
-  // }).catch(err => {
-  //
-  // })
+  createApi({}).then(res => {
+    message.success("模拟新增成功")
+    getList()
+  }).catch(err => {
+  
+  })
 };
 
 const confirmDelete = (record: any) => {

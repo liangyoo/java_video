@@ -1,17 +1,11 @@
+<<<<<<< HEAD
 # Java视频点播网站
 
 > *一直想做一款管理系统，看了很多优秀的开源项目但是发现没有合适的。于是利用空闲休息时间开始自己写了一套管理系统。现将部分源码开源，如需完整源码，可以联系客服微信购买：Lengqin1024*
+=======
+# 基于Java的视频点播网站系统设计与实现
+>>>>>>> parent of 28ab66b... fix
 
-### 演示地址
-
-前台地址：  http://video.gitapp.cn
-
-后台地址： http://video.gitapp.cn/admin
-
-后台管理帐号：
-
-用户名：admin123
-密码：admin123
 
 ### 功能介绍
 
@@ -24,9 +18,18 @@
 
 ### 适合人群
 
-大学生、系统设计人员、课程作业
+java初级学员、大学生、系统设计人员
 
+### 演示地址
 
+前台地址：  
+
+后台地址： 
+
+后台管理帐号：
+
+用户名：admin123
+密码：admin123
 
 ### 代码结构
 
@@ -43,15 +46,26 @@
 
 3. 配置server目录中的application.yml文件，配置BASE_LOCATION、DB_NAME、数据库账号密码
 
+<<<<<<< HEAD
 4. 安装mysql 5.7数据库，并创建数据库，创建SQL如下：
 ```
 CREATE DATABASE IF NOT EXISTS java_video DEFAULT CHARSET utf8 COLLATE utf8_general_ci
+=======
+(3) 安装mysql 5.7数据库，并创建数据库，命名为java_shop，创建SQL如下：
+```
+CREATE DATABASE IF NOT EXISTS java_shop DEFAULT CHARSET utf8 COLLATE utf8_general_ci
+>>>>>>> parent of 28ab66b... fix
 ```
 5. 恢复sql数据。在mysql下依次执行如下命令：
 
 ```
+<<<<<<< HEAD
 mysql> use java_video;
 mysql> source D:/xxx/xxx/xxx.sql;
+=======
+mysql> use java_shop;
+mysql> source D:/xxx/xxx/shop.sql;
+>>>>>>> parent of 28ab66b... fix
 ```
 
 6. 启动后端服务：点击IDEA顶部run按钮

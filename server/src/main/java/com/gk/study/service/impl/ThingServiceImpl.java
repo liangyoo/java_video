@@ -43,11 +43,6 @@ public class ThingServiceImpl extends ServiceImpl<ThingMapper, Thing> implements
             queryWrapper.orderBy(true, false, "create_time");
         }
 
-        // 根据分类筛选
-        if (StringUtils.isNotBlank(c) && !c.equals("-1")) {
-            queryWrapper.eq(true, "classification_id", c);
-        }
-
         List<Thing> things = mapper.selectList(queryWrapper);
 
         // tag筛选
@@ -91,6 +86,9 @@ public class ThingServiceImpl extends ServiceImpl<ThingMapper, Thing> implements
         }
         if (thing.getWishCount() == null) {
             thing.setWishCount("0");
+        }
+        if (thing.getStatus() == null) {
+            thing.setStatus("0");
         }
         mapper.insert(thing);
         // 更新tag
@@ -139,7 +137,7 @@ public class ThingServiceImpl extends ServiceImpl<ThingMapper, Thing> implements
         thingTagMapper.deleteByMap(map);
         // 新增tag
         if (thing.getTags() != null) {
-            for (Long tag : thing.getTags()) {
+            for (Long tag : thing.getTags())  {
                 ThingTag thingTag = new ThingTag();
                 thingTag.setThingId(thing.getId());
                 thingTag.setTagId(tag);

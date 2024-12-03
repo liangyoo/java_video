@@ -35,7 +35,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         queryWrapper.eq("role","3");
         return userMapper.selectOne(queryWrapper);
     }
-
     @Override
     public User getNormalUser(User user) {
         QueryWrapper<User> queryWrapper = new QueryWrapper();

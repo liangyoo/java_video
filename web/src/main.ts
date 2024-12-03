@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 import piniaStore from './store';
-
+import ElementPlue from 'element-plus';
 import bootstrap from './core/bootstrap';
 import '/@/styles/reset.less';
 import '/@/styles/index.less';
@@ -15,4 +15,5 @@ app.use(Antd);
 app.use(router);
 app.use(piniaStore);
 app.use(bootstrap)
+app.use(ElementPlue);
 app.mount('#app');

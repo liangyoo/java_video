@@ -22,7 +22,7 @@
           <span class="tab"
                 :class="contentData.selectTabIndex===index? 'tab-select':''"
                 v-for="(item,index) in contentData.tabData"
-                :key="index"
+                :key="index"  
                 @click="selectTab(index)">
             {{ item }}
           </span>
@@ -62,7 +62,7 @@
 import {listApi as listClassificationList} from '/@/api/classification'
 import {listApi as listTagList} from '/@/api/tag'
 import {listApi as listThingList} from '/@/api/thing'
-import {BASE_URL} from "/@/store/constants";
+import {BASE_URL,IMAGE_URL} from "/@/store/constants";
 import {useUserStore} from "/@/store";
 import PlayIcon from '/@/assets/images/Play.png'
 import {getFormatTime} from '/@/utils/'
@@ -162,7 +162,7 @@ const getThingList = (data) => {
     contentData.loading = false
     res.data.forEach((item, index) => {
       if (item.cover) {
-        item.cover = BASE_URL + '/api/staticfiles/image/' +  item.cover
+        item.cover = IMAGE_URL+'/image/' +  item.cover
       }
     })
     console.log(res)

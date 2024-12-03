@@ -1,5 +1,7 @@
 <template>
   <div class="main-bar-view">
+    <div style="margin-left: 30% ; font-weight: 200;font-size: 30px;">
+      <img src="" > 大学生创业网站 </div>
     <div class="logo">
       <img :src="logoImage" class="search-icon" @click="$router.push({name:'portal'})">
     </div>
@@ -16,10 +18,10 @@
           <template #overlay>
             <a-menu>
               <a-menu-item>
-                <a @click="goUserCenter('collectThingView')">交互中心</a>
+                <a @click="goUserCenter('collectThingView')">个人中心</a>
               </a-menu-item>
               <a-menu-item>
-                <a @click="goUserCenter('userInfoEditView')">个人设置</a>
+                <a @click="goUserCenter('userInfoEditView')">设置</a>
               </a-menu-item>
               <a-menu-item>
                 <a @click="quit()">退出</a>
