@@ -60,6 +60,7 @@ public class ThingServiceImpl extends ServiceImpl<ThingMapper, Thing> implements
             }
             things.clear();
             things.addAll(tThings);
+            return tThings;
         }
 
         // 附加tag
